@@ -1,0 +1,110 @@
+<!--pages/sponsor_list/index.wxml-->
+<view class='main'>
+  <view class='tab'>
+    <view bindtap='tabFun' data-index="{{1}}">
+      <text class='{{tabIndex==1?"active":""}}'>外卖</text>
+    </view>
+    <view bindtap='tabFun' data-index="2">
+      <text class='{{tabIndex==2?"active":""}}'>快递</text>
+    </view>
+    <view bindtap='tabFun' data-index="3">
+      <text class='{{tabIndex==3?"active":""}}'>拿东西</text>
+    </view>
+  </view>
+  
+<scroll-view scroll-y class='list'>
+
+  <view class="container" wx:if="{{tabIndex==1}}">
+    <!-- start -->
+    <block wx:for="{{food}}" >
+
+  <!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+
+  <navigator class="view_tupian_wenzi" bindtap="click" id="{{index}}" url="/pages/user/user_sponsor_order/sponsor_accept_food/index?id={{item._id}}">
+    <view class="left_money">
+      <view class="small">悬赏:</view> 
+      <view class="money">{{item.food.reward_amount}}<view>元</view></view>
+    </view>
+   
+    <!-- 包裹两行文字 -->
+    <view class="view_wenzi2">
+    
+      <text>饭店名：{{item.food.hotel}}</text>
+      <text class="text_small">饭名：{{item.food.food_name}}</text>
+      <text>送达地点：{{item.food.place}}</text>
+      
+    </view>
+    
+  </navigator>
+  
+</block>
+<!-- end -->
+    
+    
+  </view>
+
+  <view class="container" wx:if="{{tabIndex==2}}">
+    <!-- start -->
+    <block wx:for="{{express}}" >
+
+  <!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+
+  <navigator class="view_tupian_wenzi" bindtap="click" id="{{index}}" url="/pages/user/user_sponsor_order/sponsor_accept_express/index?id={{item._id}}">
+    <view class="left_money">
+      <view class="small">悬赏:</view> 
+      <view class="money">{{item.express.reward_amount}} <view></view></view>
+      <view style="color:blue; font-size: 20rpx;">押金:{{item.express.deposit}}元</view>
+    </view>
+   
+    <!-- 包裹两行文字 -->
+    <view class="view_wenzi2">
+    
+      <!-- <text>饭店名：{{item.food.hotel}}</text> -->
+      <text>送达地点：{{item.express.place}}</text>
+      <text class="text_small_hid">取件点:{{item.express.source_point}}</text>
+
+      
+    </view>
+    
+  </navigator>
+  
+</block>
+<!-- end -->
+    
+    
+  </view>
+
+  <view class="container" wx:if="{{tabIndex==3}}">
+    <!-- start -->
+    <block wx:for="{{thing}}" >
+
+  <!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+
+  <navigator class="view_tupian_wenzi" bindtap="click" id="{{index}}" url="/pages/user/user_sponsor_order/sponsor_accept_thing/index?id={{item._id}}">
+    <view class="left_money">
+      <view class="small">悬赏:</view> 
+      <view class="money">{{item.thing.reward_amount}} <view></view></view>
+      <view style="color:blue; font-size: 20rpx;">押金:{{item.thing.deposit}}元</view>
+    </view>
+   
+    <!-- 包裹两行文字 -->
+    <view class="view_wenzi2">
+    
+      <!-- <text>饭店名：{{item.food.hotel}}</text> -->
+      <text>送达地点：{{item.thing.goto_point}}</text>
+      <text class="text_small_hid">取件点:{{item.thing.source_point}}</text>
+      <text>货物：{{item.thing.goods}}</text>
+
+      
+    </view>
+    
+  </navigator>
+  
+</block>
+<!-- end -->
+    
+    
+  </view>
+
+</scroll-view>  
+</view>

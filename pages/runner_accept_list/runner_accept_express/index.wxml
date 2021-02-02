@@ -1,0 +1,59 @@
+<!--pages/runner_food/index.wxml-->
+<mp-cells ext-class="my-cells" title="外卖单详细情况">
+
+    <mp-cell>
+        <view>原短信</view>
+        <view slot="footer" style="height:200rpx">{{sExpress[0].express.msg}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>取件点</view>
+        <view slot="footer">{{sExpress[0].express.source_point}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>取件码</view>
+        <view slot="footer">{{sExpress[0].express.code}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>送达地点</view>
+        <view slot="footer">{{sExpress[0].express.place}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>下单时间</view>
+        <view slot="footer">{{sExpress[0].create_time}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>备注</view>
+        <view slot="footer">{{sExpress[0].express.remarks}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>派单人姓名</view>
+        <view slot="footer">{{sExpress[0].express.name}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>派单人号码</view>
+        <view slot="footer">{{sExpress[0].express.phone}}</view>
+    </mp-cell>
+
+
+    <mp-cell>
+        <view>押金</view>
+        <view slot="footer">{{sExpress[0].express.deposit}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>悬赏金额</view>
+        <view slot="footer">{{sExpress[0].express.reward_amount}}</view>
+    </mp-cell>
+
+</mp-cells>
+
+
+
+    <button type="primary" plain="true" bindtap="complete" formType="submit">已经送达</button>

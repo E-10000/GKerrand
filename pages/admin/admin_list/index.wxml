@@ -1,0 +1,35 @@
+<!--pages/admin/admin_list/index.wxml-->
+待审核列表
+<scroll-view scroll-y class='list'>
+
+<view class="container" >
+  <!-- start -->
+  <block wx:for="{{temp_user_data_list}}" >
+
+<!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+
+<navigator class="view_tupian_wenzi" bindtap="click" id="{{index}}"  url="/pages/admin/admin_check/index?id={{item._id}}" >
+
+ 
+  <!-- 包裹两行文字 -->
+  <view class="view_wenzi2">
+  
+    <text>姓名{{item.data.name}}</text>
+    <text>身份证：{{item.data.identity}}</text>
+    <text>电话：{{item.data.phone}}</text>
+    <text>学生证号{{item.data.student_id}}</text>
+
+    
+  </view>
+  
+</navigator>
+
+</block>
+<!-- end -->
+  
+  
+</view>
+
+
+
+</scroll-view>  

@@ -1,0 +1,62 @@
+<!--pages/runner_food/index.wxml-->
+<mp-cells ext-class="my-cells" title="外卖单详细情况">
+
+    <mp-cell>
+        <view>饭店名</view>
+        <view slot="footer">{{sFood[0].food.hotel}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>饭名</view>
+        <view slot="footer">{{sFood[0].food.food_name}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>送达地点</view>
+        <view slot="footer">{{sFood[0].food.place}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>下单时间</view>
+        <view slot="footer">{{sFood[0].create_time}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>备注</view>
+        <view slot="footer">{{sFood[0].food.remarks}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>派单人姓名</view>
+        <view slot="footer">{{sFood[0].food.name}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>派单人号码</view>
+        <view slot="footer">{{sFood[0].food.phone}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>押金</view>
+        <view slot="footer">{{sFood[0].food.deposit}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>悬赏金额</view>
+        <view slot="footer">{{sFood[0].food.reward_amount}}</view>
+    </mp-cell>
+
+</mp-cells>
+
+<form bindsubmit="formSubmit">
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+        <view class="weui-label" style="color:red">买饭钱</view>
+        </view>
+        <view class="weui-cell__bd">
+        <input class="weui-input" name='buy_food_money' type="number" value='{{form.buy_food_money}}' placeholder="(请填写)例：12" />
+        </view>
+    </view>
+
+    <button type="primary" plain="true" bindtap="complete" formType="submit">已经送达</button>
+</form>

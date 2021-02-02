@@ -1,0 +1,43 @@
+<!--pages/runner/runner.wxml-->
+<navigator url="/pages/order/index" class='item'>
+    <view class='left'>
+      我要接单
+    </view>
+  </navigator>
+<view class='icon'>
+
+    <navigator hover-class="none" url="/pages/runner_list/index?type=1">
+      <image src='https://img-blog.csdnimg.cn/20210201130106566.png' mode="aspectFit"></image>
+      <text>拿外卖</text>
+    </navigator>
+    <navigator hover-class="none" url="/pages/runner_list/index?type=2">
+      <image src='https://img-blog.csdnimg.cn/20210201130327659.png#pic_center' mode="aspectFit"></image>
+      <text>拿快递</text>
+    </navigator>
+    <navigator hover-class="none" url="/pages/runner_list/index?type=3">
+      <image src='https://img-blog.csdnimg.cn/20210201130106500.png' mode="aspectFit"></image>
+      <text>拿东西</text>
+    </navigator>
+  </view>
+
+<navigator url="/pages/order/index" class='item'>
+    <view class='left'>
+      查看接到的单
+    </view>
+  </navigator>
+<view class='icon'>
+
+    <navigator hover-class="none" url="/pages/runner_accept_list/index?type=1">
+      <image src='https://img-blog.csdnimg.cn/20210201130106566.png' mode="aspectFit"></image>
+      <text>外卖</text>
+    </navigator>
+    <navigator hover-class="none" url="/pages/runner_accept_list/index?type=2">
+      <image src='https://img-blog.csdnimg.cn/20210201130327659.png#pic_center' mode="aspectFit"></image>
+      <text>拿快递</text>
+    </navigator>
+    <navigator hover-class="none" url="/pages/runner_accept_list/index?type=3">
+      <image src='https://img-blog.csdnimg.cn/20210201130106500.png' mode="aspectFit"></image>
+      <text>拿东西</text>
+    </navigator>
+  </view>
+

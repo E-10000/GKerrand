@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/user/user",
+    "pages/index/index",
+    "pages/runner/runner",
+    "pages/sponsor/sponsor",
+    "pages/logs/logs",
+    "pages/sponsor_food/index",
+    "pages/sponsor_thing/index",
+    "pages/runner_list/index",
+    "pages/runner_food/index",
+    "pages/runner_express/index",
+    "pages/runner_thing/index",
+    "pages/user_data/index",
+    "pages/user_data_edit/index",
+    "pages/runner_accept_list/index",
+    "pages/runner_accept_list/runner_accept_food/index",
+    "pages/sponsor/sponsor_accept_list/index",
+    "pages/sponsor/sponsor_accept_food/index",
+    "pages/sponsor/sponsor_accept_express/index",
+    "pages/sponsor/sponsor_accept_thing/index",
+    "pages/user/user_sponsor_order/index",
+    "pages/admin/index",
+    "pages/admin/admin_list/index",
+    "pages/admin/admin_check/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "广科跑腿帮",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#333",
+    "selectedColor": "#ff5f19",
+    "list": [
+      {
+        "selectedIconPath": "images/首页.png",
+        "iconPath": "images/首页.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/跑跑.png",
+        "iconPath": "images/跑跑.png",
+        "pagePath": "pages/runner/runner",
+        "text": "跑跑"
+      },
+      {
+        "selectedIconPath": "images/派单.png",
+        "iconPath": "images/派单.png",
+        "pagePath": "pages/sponsor/sponsor",
+        "text": "发起人"
+      },
+      {
+        "selectedIconPath": "images/我的.png",
+        "iconPath": "images/我的.png",
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
+  },
+  "useExtendedLib": {
+    "weui": true
+  }
+}

@@ -1,0 +1,92 @@
+<!--pages/sponsor_list/index.wxml-->
+
+
+
+<view class="container" >
+  <form bindsubmit="formSubmit">
+      <view class="weui-cells__title">派单-拿东西</view>
+      <view class="weui-cells weui-cells_after-title">
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">姓名</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name='name' value='{{form.name}}' placeholder="请输入姓名" />
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">手机号</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name='phone' type='number' value='{{form.phone}}' placeholder="请输入手机号" />
+          </view>
+          </view>
+
+
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">取件点</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name='source_point' value='{{form.source_point}}' placeholder="例：雅苑门口" />
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">送达地点</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name='goto_point' value='{{form.goto_point}}' placeholder="例：南10-666" />
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">货物</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name='goods' value='{{form.goods}}' placeholder="例：吉他、行李箱" />
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">备注</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name='remarks'  placeholder="（可不填）例：行李箱有点大" />
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">押金</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name='deposit' type="number" value='{{form.deposit}}' placeholder="例：1" />
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">悬赏金额</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name='reward_amount' type="number" value='{{form.reward_amount}}' placeholder="例：1" />
+          </view>
+        </view>
+
+      </view>
+
+      <view class="btn-area">
+        <button plain="true" type="primary" formType="submit">提交</button>
+        <button plain="true" formType="reset">清除</button>
+      </view>
+  </form>
+</view>
+

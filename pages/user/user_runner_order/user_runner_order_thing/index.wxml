@@ -1,0 +1,120 @@
+<!--pages/runner_food/index.wxml-->
+
+<mp-cells ext-class="my-cells" title="外卖单详细情况">
+
+    <mp-cell>
+        <view>单号</view>
+        <view slot="footer">{{sThing[0]._id}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>取件点</view>
+        <view slot="footer">{{sThing[0].thing.source_point}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>货物</view>
+        <view slot="footer">{{sThing[0].thing.goods}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>送达地点</view>
+        <view slot="footer">{{sThing[0].thing.goto_point}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>下单时间</view>
+        <view slot="footer">{{sThing[0].create_time}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>备注</view>
+        <view slot="footer">{{sThing[0].thing.remarks}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>派单人姓名</view>
+        <view slot="footer">{{sThing[0].thing.name}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>派单人号码</view>
+        <view slot="footer">{{sThing[0].thing.phone}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>押金</view>
+        <view slot="footer">{{sThing[0].thing.deposit}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>悬赏金额</view>
+        <view slot="footer">{{sThing[0].thing.reward_amount}}</view>
+    </mp-cell>
+
+
+    <view wx:if="{{sThing[0].state==1}}">
+        <mp-cell >
+            <view>状态</view>
+            <view slot="footer">接单中</view>
+        </mp-cell>
+        <mp-cell >
+            <view>接单人姓名</view>
+            <view slot="footer">{{sThing[0].accept_name}}</view>
+        </mp-cell>
+        <mp-cell >
+            <view>接单人号码</view>
+            <view slot="footer">{{sThing[0].accept_phone}}</view>
+        </mp-cell>
+    </view>
+
+
+    <view wx:if="{{sThing[0].state==2}}">
+        <mp-cell >
+            <view>状态</view>
+            <view slot="footer">已送达</view>
+        </mp-cell>
+        <mp-cell >
+            <view>接单人姓名</view>
+            <view slot="footer">{{sThing[0].accept_name}}</view>
+        </mp-cell>
+        <mp-cell >
+            <view>接单人号码</view>
+            <view slot="footer">{{sThing[0].accept_phone}}</view>
+        </mp-cell>
+
+    </view>
+
+    <view wx:if="{{sThing[0].state==3}}">
+        <mp-cell >
+            <view>状态</view>
+            <view slot="footer">已送达</view>
+        </mp-cell>
+        <mp-cell >
+            <view>接单人姓名</view>
+            <view slot="footer">{{sThing[0].accept_name}}</view>
+        </mp-cell>
+        <mp-cell >
+            <view>接单人号码</view>
+            <view slot="footer">{{sThing[0].accept_phone}}</view>
+        </mp-cell>
+
+    </view>
+
+    
+
+
+    <view wx:if="{{sExpress[0].state==4}}">
+        <mp-cell >
+            <view>状态</view>
+            <view slot="footer">派单人已取消订单</view>
+        </mp-cell>
+
+    </view>
+
+
+</mp-cells>
+<!-- 
+<button type="primary" plain="true" bindtap="change" wx:if="{{sThing[0].state==0||sThing[0].state==1}}" data-sThing="{{sThing[0]}}">修改</button>
+<button type="primary" plain="true" bindtap="out" wx:if="{{sThing[0].state==0||sThing[0].state==1}}">退单</button>
+<button type="primary" plain="true" bindtap="pay" wx:if="{{sThing[0].state==2}}">支付</button> -->

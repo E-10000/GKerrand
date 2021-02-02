@@ -1,0 +1,44 @@
+<!--pages/sponsor/sponsor.wxml-->
+<navigator url="/pages/order/index" class='item'>
+    <view class='left'>
+      我要派单
+    </view>
+  </navigator>
+<view class='icon'>
+
+    <navigator hover-class="none" url="/pages/sponsor_food/index">
+      <image src='https://img-blog.csdnimg.cn/20210201130106568.png' mode="aspectFit"></image>
+      <text>拿外卖</text>
+    </navigator>
+    <navigator hover-class="none" url="/pages/sponsor_express/index">
+      <image src='https://img-blog.csdnimg.cn/20210201130106495.png' mode="aspectFit"></image>
+      <text>拿快递</text>
+    </navigator>
+    <navigator hover-class="none" url="/pages/sponsor_thing/index">
+      <image src='https://img-blog.csdnimg.cn/20210201130106503.png' mode="aspectFit"></image>
+      <text>拿东西</text>
+    </navigator>
+  </view>
+
+<navigator url="/pages/order/index" class='item'>
+    <view class='left'>
+      查看已派的单
+    </view>
+  </navigator>
+<view class='icon'>
+
+    <navigator hover-class="none" url="/pages/sponsor/sponsor_accept_list/index?type=1">
+      <image src='https://img-blog.csdnimg.cn/20210201130106568.png' mode="aspectFit"></image>
+      <text>外卖</text>
+    </navigator>
+    <navigator hover-class="none" url="/pages/sponsor/sponsor_accept_list/index?type=2">
+      <image src='https://img-blog.csdnimg.cn/20210201130106495.png' mode="aspectFit"></image>
+      <text>拿快递</text>
+    </navigator>
+    <navigator hover-class="none" url="/pages/sponsor/sponsor_accept_list/index?type=3">
+      <image src='https://img-blog.csdnimg.cn/20210201130106503.png' mode="aspectFit"></image>
+      <text>拿东西</text>
+    </navigator>
+  </view>
+
+

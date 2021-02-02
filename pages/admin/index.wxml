@@ -1,0 +1,7 @@
+<!--pages/admin/index.wxml-->
+请输入管理员密码：
+<form bindsubmit="formSubmit">
+  <input class="weui-input"  name='password' value='{{form.name}}' type="password" placeholder="请输入密码" />
+  <button plain="true" type="primary" formType="submit">确定</button>
+  
+</form>

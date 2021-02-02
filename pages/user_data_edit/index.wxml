@@ -1,0 +1,63 @@
+<!--pages/sponsor_list/index.wxml-->
+
+
+
+<view class="container" >
+  <form bindsubmit="formSubmit">
+      <view class="weui-cells__title">修改个人资料</view>
+      <view class="weui-cells weui-cells_after-title">
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">姓名</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name='name' value='{{form.name}}' placeholder="请输入姓名" />
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">手机号</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name='phone' type='number' value='{{form.phone}}' placeholder="请输入手机号" />
+          </view>
+          </view>
+
+          <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">身份证号</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name='identity' type='number' value='{{form.identity}}' placeholder="请输入身份证号" />
+          </view>
+          </view>
+
+          <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">学生证号</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name='student_id' type='number' value='{{form.student_id}}' placeholder="请输入学生证号" />
+          </view>
+          </view>
+          
+
+
+          <mp-cell>
+              <view></view>
+              <view slot="footer">上传3张图片（身份证正反面、学生证）</view>
+          </mp-cell>
+          <button type="primary" plain="true" bindtap="uploadImg">上传图片</button>
+          <image wx:for="{{img}}" src="{{item}}" mode="aspectFit" data-src="{{item}}" bindtap="preImg" alt=""></image>
+
+      </view>
+
+      <view class="btn-area">
+        <button splain="true" type="primary" formType="submit">提交</button>
+        <button plain="true" formType="reset">清除</button>
+      </view>
+  </form>
+</view>
+

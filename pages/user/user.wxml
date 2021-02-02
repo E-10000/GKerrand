@@ -1,0 +1,101 @@
+<!--pages/user/user.wxml-->
+<scroll-view scroll-y style='height:100vh;'>
+  <view class='top'>
+    <!-- <navigator url="/pages/bindPhone/index" class='img'>
+      
+    </navigator> -->
+    <view>
+       <view class='img'><open-data type="userAvatarUrl"></open-data></view><view class='text'><open-data type="userNickName"></open-data></view>
+    </view>
+  </view>
+  
+  <navigator url="/pages/order/index" class='item'>
+    <view class='left'>
+      发起订单
+    </view>
+    <view class='right'>
+      <image src='/images/my_order.png'></image>
+    </view>
+  </navigator>
+  <view class='icon'>
+    <navigator url="/pages/user/user_sponsor_order/index?type=1" hover-class="none" >
+      <image src='https://img-blog.csdnimg.cn/20210201130106568.png' mode="aspectFit"></image>
+      <text>拿外卖</text>
+    </navigator>
+    <navigator url="/pages/user/user_sponsor_order/index?type=2" hover-class="none" >
+      <image src='https://img-blog.csdnimg.cn/20210201130106495.png' mode="aspectFit"></image>
+      <text>拿快递</text>
+    </navigator>
+    <navigator url="/pages/user/user_sponsor_order/index?type=3" hover-class="none" >
+      <image src='https://img-blog.csdnimg.cn/20210201130106503.png' mode="aspectFit"></image>
+      <text>拿东西</text>
+    </navigator>
+  </view>
+
+  <navigator url="/pages/order/index" class='item'>
+    <view class='left'>
+      跑跑订单
+    </view>
+    <view class='right'>
+      <image src='/images/my_order.png'></image>
+    </view>
+  </navigator>
+  <view class='icon'>
+    <navigator url="/pages/user/user_runner_order/index?type=1" hover-class="none" >
+      <image src='https://img-blog.csdnimg.cn/20210201130106566.png' mode="aspectFit"></image>
+      <text>拿外卖</text>
+    </navigator>
+    <navigator url="/pages/user/user_runner_order/index?type=2" hover-class="none" >
+      <image src='https://img-blog.csdnimg.cn/20210201130327659.png#pic_center' mode="aspectFit"></image>
+      <text>拿快递</text>
+    </navigator>
+    <navigator url="/pages/user/user_runner_order/index?type=3" hover-class="none" >
+      <image src='https://img-blog.csdnimg.cn/20210201130106500.png' mode="aspectFit"></image>
+      <text>拿东西</text>
+    </navigator>
+  </view>
+
+
+
+
+  <navigator url="/pages/user/frozen/index?type=2" class='item'>
+    <view class='left'>
+      冻结查询
+    </view>
+    <view class='right'>
+      <image src='/images/my_order.png'></image>
+    </view>
+  </navigator>
+
+    <navigator url="/pages/user_data/index" class='item'>
+    <view class='left'>
+      个人信息
+    </view>
+    <view class='right'>
+      <image src='/images/my_order.png'></image>
+    </view>
+  </navigator>
+
+  <navigator url="/pages/admin/index" class='item'>
+    <view class='left'>
+      管理员审核中心
+    </view>
+    <view class='right'>
+      <image src='/images/my_order.png'></image>
+    </view>
+  </navigator>
+
+  <navigator url="/pages/coupon/index" class='item'>
+    <button open-type='contact' session-from='' >客服-联系我们</button>
+    <!-- <view class='left'>
+      客服中心/用户反馈
+    </view> -->
+    <!-- <view class='right'>
+      <image src='/images/my_order.png'></image>
+    </view> -->
+  </navigator>
+
+
+
+
+</scroll-view>

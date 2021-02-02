@@ -1,0 +1,43 @@
+<!--pages/runner_food/index.wxml-->
+<mp-cells ext-class="my-cells" title="外卖单详细情况">
+
+    <mp-cell>
+        <view>编号</view>
+        <view slot="footer">{{user_data[0]._id}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>ID号</view>
+        <view slot="footer">{{user_data[0]._openid}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>姓名</view>
+        <view slot="footer">{{user_data[0].data.name}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>身份证</view>
+        <view slot="footer">{{user_data[0].data.identity}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>学号</view>
+        <view slot="footer">{{user_data[0].data.student_id}}</view>
+    </mp-cell>
+
+    <mp-cell>
+        <view>电话</view>
+        <view slot="footer">{{user_data[0].data.phone}}</view>
+    </mp-cell>
+
+
+</mp-cells>
+
+<image src="{{img1}}" bindtap="preImg" data-src="{{img1}}" mode="aspectFit"></image>
+<image src="{{img2}}" bindtap="preImg" data-src="{{img2}}" mode="aspectFit"></image>
+<image src="{{img3}}" bindtap="preImg" data-src="{{img3}}" mode="aspectFit"></image>
+
+<button type="primary" plain="true" bindtap="pass" formType="submit">审核通过</button>
+<button type="warn" plain="true" bindtap="out" formType="submit">审核不通过</button>
+

@@ -1,0 +1,31 @@
+<!--pages/user_data/index.wxml-->
+
+<mp-cells ext-class="my-cells" title="以下4项是成为跑跑必填的(第一次填写数据时需要等待一段时间或者再次点击修改即可)">
+    <text wx:if="{{isCheck==true}}" style="color:red">新资料正在审核中</text>
+<mp-cell>
+    <view>姓名</view>
+    <view slot="footer">{{user_data.data.name}}</view>
+</mp-cell>
+
+<mp-cell>
+    <view>手机号</view>
+    <view slot="footer">{{user_data.data.phone}}</view>
+</mp-cell>
+
+<mp-cell>
+    <view>身份证号</view>
+    <view slot="footer">{{user_data.data.identity}}</view>
+</mp-cell>
+
+<mp-cell>
+    <view>学生证号</view>
+    <view slot="footer">{{user_data.data.student_id}}</view>
+</mp-cell>
+
+
+
+
+</mp-cells>
+<!-- <image src="{{img}}"></image> -->
+
+<button type="primary" plain="true" bindtap="change">修改</button>
